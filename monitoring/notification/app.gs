@@ -24,8 +24,9 @@ function app() {
       drawRow(row.id, 'orange');
     }
   });
-  console.log({servers:res});
-  sendServerEmail({servers:res});
+   if (res.length > 0) {
+    sendServerEmail({servers:res});
+  }
 }
 
 function drawRow(id, color) {
