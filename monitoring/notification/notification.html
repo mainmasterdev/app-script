@@ -1,0 +1,38 @@
+<div style="margin: 20px;">
+    <div style="background-color: red;">
+        Total servidores a revisar
+        <?= servers.length ?>
+    </div>
+
+    <table style="width: 100%;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Days</th>
+                <th>Due Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <? servers.forEach(server => { ?>
+            <tr style="text-align: center;">
+                <td>
+                    <?= server.id ?>
+                </td>
+                <td>
+                    <?= server.name ?>
+                </td>
+                <td>
+                    <?= server.days ?>
+                </td>
+                <td>
+                    <?= server.due_date ?>
+                </td>
+            </tr>
+            <? }) ?>
+        </tbody>
+    </table>
+    <div style="display:grid; grid-template-columns: auto auto auto;background-color: #fff; padding: 10px;"></div>
+</div>
+</div>
